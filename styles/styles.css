@@ -1,0 +1,125 @@
+.header {
+  margin-bottom: 100px;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__logo {
+  color: #ebe691;
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.header__actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.actions-header__input {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 40px;
+  width: 300px;
+  padding: 0 15px;
+  color: #5e5372;
+}
+.actions-header__input:focus {
+  border: 2px solid rgb(241, 125, 125);
+}
+.actions-header__button {
+  color: #413659;
+  background-color: #ebe691;
+  display: inline-flex;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 15px 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .actions-header__button:hover {
+    background-color: #413659;
+    color: #ebe691;
+  }
+}
+
+.main__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  row-gap: 5px;
+}
+.main__item {
+  background-color: #fff;
+  color: #000;
+  padding: 15px 5px 10px 25px;
+  position: relative;
+  border: 1px solid #000;
+}
+
+.item__logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45px;
+}
+.item__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  margin-bottom: 5px;
+}
+.item__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 0 25px;
+}
+.item__name {
+  font-weight: 600;
+}
+.item__description {
+  max-width: 350px;
+  word-break: break-all;
+}
+.item__price {
+  text-align: center;
+  background: #d6c8f1;
+  padding: 5px 40px;
+  border-radius: 300px;
+  justify-self: center;
+  justify-content: center;
+  align-self: flex-end;
+  font-weight: 600;
+}
+
+@media print {
+  .main__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(4);
+    gap: 10px;
+    margin: 0;
+    list-style: none;
+  }
+  .main__item {
+    border: 1px solid #ccc;
+    padding: 10px 10px 10px 25px;
+  }
+  .item__logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  body {
+    background-color: #fff;
+  }
+}/*# sourceMappingURL=styles.css.map */
